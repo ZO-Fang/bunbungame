@@ -1,20 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch265iegomto5"]
+[gd_scene load_steps=3 format=3 uid="uid://ch265iegomto5"]
 
 [ext_resource type="PackedScene" uid="uid://bov444elg6cai" path="res://bg1.tscn" id="1_8rhti"]
 [ext_resource type="PackedScene" uid="uid://c2qjusm6toccv" path="res://player.tscn" id="2_3vi8l"]
-[ext_resource type="PackedScene" uid="uid://dkrmtjqskmdnt" path="res://deadtrap.tscn" id="3_8rhti"]
 
 [node name="base" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource("1_8rhti")]
-position = Vector2(678, 105)
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="bg1" parent="Node2D" instance=ExtResource("1_8rhti")]
 
 [node name="player" parent="." instance=ExtResource("2_3vi8l")]
-position = Vector2(213, -80.9999)
+position = Vector2(-560, -189)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(12.8575, -4.28589)
+position = Vector2(-7.14289, 104.286)
 rotation = -1.58825
-
-[node name="deadtrap" parent="." instance=ExtResource("3_8rhti")]
-position = Vector2(1534, 570)
