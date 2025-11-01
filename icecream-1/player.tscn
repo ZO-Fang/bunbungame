@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2qjusm6toccv"]
+
+[ext_resource type="Script" uid="uid://5yo72xttvrxd" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://du3xgs88pt1kc" path="res://bunbun2.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://d1r0qeu21mcf3" path="res://bunbun3.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bxfsdrar0ob3e" path="res://bunbun4.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://b8jd6kgvxo7m0" path="res://bunbun1.png" id="5_dw050"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
+size = Vector2(57, 154)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dw050")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_sh265")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+visible = false
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D/ColorRect"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 38.0
+offset_bottom = 37.0
+color = Color(1, 0.156863, 0.235294, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_n7ghd")
+animation = &"walk"
+autoplay = "walk"
+frame = 5
+frame_progress = 0.251148
