@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dyc0e87m5y84e"]
+
+[ext_resource type="Texture2D" uid="uid://cx74sjjd1kn3y" path="res://animation/bunbunanime/bunbun1.png" id="1_bx37k"]
+[ext_resource type="Texture2D" uid="uid://1e7jtw7kryhu" path="res://animation/bunbunanime/bunbun2.png" id="2_knyf1"]
+[ext_resource type="Texture2D" uid="uid://cydcrgw1slo4i" path="res://animation/bunbunanime/bunbun3.png" id="3_vjxqq"]
+[ext_resource type="Texture2D" uid="uid://qyu818mfxvd3" path="res://animation/bunbunanime/bunbun4.png" id="4_abeee"]
+
+[sub_resource type="GDScript" id="GDScript_bx37k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0o5ge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bx37k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_knyf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vjxqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_abeee")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bx37k"]
+radius = 52.0
+height = 216.0
+
+[node name="bunbun" type="CharacterBody2D"]
+script = SubResource("GDScript_bx37k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_0o5ge")
+frame_progress = 0.297771
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_bx37k")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.5, 0.5)

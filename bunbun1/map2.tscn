@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://crxhykrwy0e7u"]
+
+[ext_resource type="Texture2D" uid="uid://bcm46i6et5phh" path="res://map/Illustration2.jpg" id="1_5bwnj"]
+[ext_resource type="PackedScene" uid="uid://dyc0e87m5y84e" path="res://bunbunidle.tscn" id="2_kyc3v"]
+[ext_resource type="PackedScene" uid="uid://1rpi6vsd3p77" path="res://exitgate.tscn" id="3_55y45"]
+
+[node name="map2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5bwnj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+rotation = 1.57292
+polygon = PackedVector2Array(-849, -641, -956, -643, -955, -881, -173, -872, 701, -468, 677, 783, 523, 783, 525, -446, -290, -762, -668, -762, -668, -810, -847, -805)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+rotation = 1.57131
+polygon = PackedVector2Array(-944, -648, -856, -646, -853, -627, -668, -615, -661, -639, -321, -625, 376, -363, 375, 920, 854, 923, 844, 987, 323, 982, 292, -341, -595, -580, -951, -574)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+rotation = 1.56075
+polygon = PackedVector2Array(677, 681, 925, 690, 934, 956, 848, 935, 858, 747, 682, 752)
+
+[node name="bunbun" parent="Sprite2D" instance=ExtResource("2_kyc3v")]
+position = Vector2(-859, 808)
+
+[node name="exitgate" parent="Sprite2D" instance=ExtResource("3_55y45")]
+position = Vector2(712, -769)
+next_map_path = "uid://d0fl5rnllxejm"

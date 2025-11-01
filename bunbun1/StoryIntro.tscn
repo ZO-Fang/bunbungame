@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi6wq7rwvq8fj"]
+
+[ext_resource type="Texture2D" uid="uid://crnsu1enlkax" path="res://drawings/download.jpg" id="1_056wk"]
+[ext_resource type="Script" uid="uid://dv3p4cilrro3s" path="res://story_intro.gd" id="1_nh5m7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_056wk"]
+font_size = 81
+
+[node name="StoryIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nh5m7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -690.0
+offset_top = -685.0
+offset_right = 1851.0
+offset_bottom = 1391.0
+color = Color(0.677482, 0.928613, 0.994682, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -316.0
+offset_top = -138.0
+offset_right = 1449.0
+offset_bottom = 816.0
+texture = ExtResource("1_056wk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.64634, 0.00294406, 0.912003, 1)
+layout_mode = 0
+offset_left = 324.0
+offset_top = 248.0
+offset_right = 880.0
+offset_bottom = 359.0
+text = "intro picture 1"
+label_settings = SubResource("LabelSettings_056wk")
+horizontal_alignment = 1
