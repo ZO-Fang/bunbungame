@@ -1,21 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch265iegomto5"]
+[gd_scene load_steps=4 format=3 uid="uid://ch265iegomto5"]
 
 [ext_resource type="PackedScene" uid="uid://bov444elg6cai" path="res://bg1.tscn" id="1_8rhti"]
+[ext_resource type="PackedScene" uid="uid://f1kwfxif1hg4" path="res://ui.tscn" id="1_ohhpf"]
 [ext_resource type="PackedScene" uid="uid://c2qjusm6toccv" path="res://player.tscn" id="2_3vi8l"]
 
 [node name="base" type="Node2D"]
+
+[node name="ui" parent="." instance=ExtResource("1_ohhpf")]
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="bg1" parent="Node2D" instance=ExtResource("1_8rhti")]
 
 [node name="player" parent="." instance=ExtResource("2_3vi8l")]
-position = Vector2(-560, -189)
+position = Vector2(-882, -1011)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-7.14289, 104.286)
 rotation = -1.58825
-limit_left = -1527
-limit_top = -955
-limit_right = 1517
-limit_bottom = 936
+limit_left = -1675
+limit_top = -1651
+limit_right = 1634
+limit_bottom = 1664

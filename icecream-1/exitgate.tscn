@@ -1,23 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://delqllps6e33h"]
+[gd_scene load_steps=4 format=3 uid="uid://delqllps6e33h"]
 
 [ext_resource type="Script" uid="uid://cqe621cxaiaxo" path="res://exitgate.gd" id="1_djdhw"]
+[ext_resource type="Texture2D" uid="uid://mp7ana14k16o" path="res://images/tools/exitgate.png" id="2_8tveo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqf5c"]
-size = Vector2(192, 213)
+[sub_resource type="CircleShape2D" id="CircleShape2D_y73ux"]
+radius = 103.011
 
 [node name="exitgate" type="Area2D"]
 script = ExtResource("1_djdhw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(86, 96.5)
-shape = SubResource("RectangleShape2D_sqf5c")
+shape = SubResource("CircleShape2D_y73ux")
 debug_color = Color(0.363722, 0.169498, 1, 0.42)
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 169.0
-offset_bottom = 190.0
-color = Color(0.969557, 0.48033, 0.724527, 1)
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture = ExtResource("2_8tveo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

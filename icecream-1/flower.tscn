@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddr47i5i7fykx"]
+
+[ext_resource type="Texture2D" uid="uid://p3bgw512c1m5" path="res://images/tools/flower.png" id="1_p547k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nageh"]
+radius = 70.0286
+
+[node name="flower" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nageh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p547k")
