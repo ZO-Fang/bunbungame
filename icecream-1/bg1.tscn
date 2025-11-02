@@ -21,7 +21,6 @@ polygon = PackedVector2Array(-1541, -958, 1581, -937, 1565, -1031, -1508, -1039)
 
 [node name="exitgate" parent="." instance=ExtResource("2_esgjt")]
 position = Vector2(-637, -764)
-player_new_position = Vector2(-560, -189)
 
 [node name="deadtrap" parent="." instance=ExtResource("3_bgdc1")]
 position = Vector2(355, -894)
