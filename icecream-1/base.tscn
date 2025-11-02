@@ -15,3 +15,7 @@ position = Vector2(-560, -189)
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-7.14289, 104.286)
 rotation = -1.58825
+limit_left = -1527
+limit_top = -955
+limit_right = 1517
+limit_bottom = 936

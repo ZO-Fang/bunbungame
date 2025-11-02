@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxlcnb6k46wq8"]
+
+[ext_resource type="Texture2D" uid="uid://yfkn7wgrsyo8" path="res://images/background/download.jpg" id="1_a8lcc"]
+[ext_resource type="Script" uid="uid://cq1p7sjxslhwu" path="res://button.gd" id="2_cnyh4"]
+
+[node name="youwin" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -547.0
+offset_top = -499.0
+offset_right = 1854.0
+offset_bottom = 1247.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = -547.0
+offset_top = -499.0
+offset_right = 1914.0
+offset_bottom = 1291.0
+texture = ExtResource("1_a8lcc")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 99.0
+offset_right = 1412.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0.672044, 0.228791, 0.762726, 1)
+theme_override_font_sizes/font_size = 100
+text = "Congradulation, You win!! "
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 572.0
+offset_top = 384.0
+offset_right = 825.0
+offset_bottom = 461.0
+theme_override_font_sizes/font_size = 50
+text = "play again"
+script = ExtResource("2_cnyh4")

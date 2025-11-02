@@ -12,9 +12,12 @@ texture = ExtResource("1_4od2g")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(32.2915, 91.6667)
+position = Vector2(30.2915, 91.6667)
 scale = Vector2(4.25014, 2.56457)
-polygon = PackedVector2Array(-370, -102, -236, -66, -136, -61, -94, -92, -65, -97, -11, -87, 15, -42, 49, -22, 106, -40, 157, -88, 184, -98, 236, -80, 249, -52, 293, -32, 370, -38, 380, 38, 331, 66, 287, 42, 232, 29, 197, -8, 154, 35, 112, 59, 72, 25, 41, 66, -39, 13, -70, 2, -93, 34, -169, 9, -229, 16, -290, -14, -373, -50, -375, -105)
+polygon = PackedVector2Array(-370, -102, -236, -66, -136, -61, -94, -92, -65, -97, -11, -87, 15, -42, 49, -22, 106, -40, 157, -88, 184, -98, 236, -80, 249, -52, 293, -32, 354.743, -411.245, 380, 38, 331, 66, 287, 42, 232, 29, 197, -8, 154, 35, 112, 59, 72, 25, 41, 66, -39, 13, -70, 2, -93, 34, -169, 9, -229, 16, -290, -14, -373, -50, -368.292, -410.075)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-1541, -958, 1581, -937, 1565, -1031, -1508, -1039)
 
 [node name="exitgate" parent="." instance=ExtResource("2_esgjt")]
 position = Vector2(-637, -764)
