@@ -1,16 +1,85 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2qjusm6toccv"]
+[gd_scene load_steps=20 format=3 uid="uid://c2qjusm6toccv"]
 
 [ext_resource type="Script" uid="uid://5yo72xttvrxd" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://du3xgs88pt1kc" path="res://bunbun2.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bbmpabe6etusf" path="res://images/player-state/mud-bun-1.png" id="2_u1c27"]
 [ext_resource type="Texture2D" uid="uid://d1r0qeu21mcf3" path="res://bunbun3.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bwf822077h7fp" path="res://images/player-state/mud-bun-2.png" id="3_op7ga"]
 [ext_resource type="Texture2D" uid="uid://bxfsdrar0ob3e" path="res://bunbun4.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://mkloyn8u3x6o" path="res://images/player-state/mud-bun-3.png" id="4_q13i1"]
 [ext_resource type="Texture2D" uid="uid://b8jd6kgvxo7m0" path="res://bunbun1.png" id="5_dw050"]
+[ext_resource type="Texture2D" uid="uid://bak0rwh2c0dqu" path="res://images/player-state/mud-bun-4.png" id="5_pylmc"]
+[ext_resource type="Texture2D" uid="uid://do0p5y08rvv18" path="res://images/player-state/iced-bunbun-1.png" id="6_u1c27"]
+[ext_resource type="Texture2D" uid="uid://d1ien0srfub8o" path="res://images/player-state/iced-bunbun-2.png" id="7_op7ga"]
+[ext_resource type="Texture2D" uid="uid://bajrirripr1t0" path="res://images/player-state/iced-bunbun-3.png" id="8_q13i1"]
+[ext_resource type="Texture2D" uid="uid://dpkswmv3s8orn" path="res://images/player-state/iced-bunbun-4.png" id="9_pylmc"]
+[ext_resource type="Texture2D" uid="uid://c3qfumnrsmo3x" path="res://images/player-state/iced-bunbun-5.png" id="10_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://c1yh10h712jdn" path="res://images/player-state/iced-bunbun-6.png" id="11_5tmop"]
+[ext_resource type="Texture2D" uid="uid://cu3dpu8r5jpob" path="res://images/player-state/iced-bunbun-7.png" id="12_7ahtn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
-size = Vector2(57, 154)
+[sub_resource type="CircleShape2D" id="CircleShape2D_b26j0"]
+radius = 58.4959
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
+size = Vector2(124, 151)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_op7ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pylmc")
+}],
+"loop": true,
+"name": &"dark-walk",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_op7ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5tmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7ahtn")
+}],
+"loop": true,
+"name": &"frozen",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_sweqy")
@@ -39,11 +108,12 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 4)
-shape = SubResource("RectangleShape2D_sh265")
+position = Vector2(4.125, 20.5)
+shape = SubResource("CircleShape2D_b26j0")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0.5, 4)
@@ -51,15 +121,17 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_sh265")
+position = Vector2(3.5, -3.5)
+shape = SubResource("RectangleShape2D_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(5, 0)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
 animation = &"walk"
 autoplay = "walk"
-frame = 5
-frame_progress = 0.251148
+frame_progress = 0.988473
 
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

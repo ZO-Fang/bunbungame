@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bogf6n7gg4fhe"]
+
+[ext_resource type="Script" uid="uid://dhywic27fbxqp" path="res://woodboard.gd" id="1_4mvla"]
+[ext_resource type="Texture2D" uid="uid://b6o2bdad5o837" path="res://images/tools/woodboard-complete.png" id="2_4mvla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mvla"]
+size = Vector2(278, 27)
+
+[node name="woodboard" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_4mvla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -13.5)
+shape = SubResource("RectangleShape2D_4mvla")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, -12)
+texture = ExtResource("2_4mvla")

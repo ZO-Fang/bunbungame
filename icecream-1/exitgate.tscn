@@ -4,17 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://mp7ana14k16o" path="res://images/tools/exitgate.png" id="2_8tveo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y73ux"]
-radius = 103.011
+radius = 105.001
 
 [node name="exitgate" type="Area2D"]
 script = ExtResource("1_djdhw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(87, 101)
+texture = ExtResource("2_8tveo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(86, 96.5)
 shape = SubResource("CircleShape2D_y73ux")
 debug_color = Color(0.363722, 0.169498, 1, 0.42)
-
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-texture = ExtResource("2_8tveo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

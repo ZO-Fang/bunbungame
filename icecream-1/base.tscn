@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch265iegomto5"]
+[gd_scene load_steps=5 format=3 uid="uid://ch265iegomto5"]
 
 [ext_resource type="PackedScene" uid="uid://bov444elg6cai" path="res://bg1.tscn" id="1_8rhti"]
 [ext_resource type="PackedScene" uid="uid://f1kwfxif1hg4" path="res://ui.tscn" id="1_ohhpf"]
 [ext_resource type="PackedScene" uid="uid://c2qjusm6toccv" path="res://player.tscn" id="2_3vi8l"]
+[ext_resource type="Texture2D" uid="uid://c4cmj7aet58c3" path="res://images/maps/transparent-1.png" id="4_ohhpf"]
 
 [node name="base" type="Node2D"]
 
@@ -13,7 +14,7 @@
 [node name="bg1" parent="Node2D" instance=ExtResource("1_8rhti")]
 
 [node name="player" parent="." instance=ExtResource("2_3vi8l")]
-position = Vector2(-882, -1011)
+position = Vector2(-1252, -1319)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-7.14289, 104.286)
@@ -22,3 +23,7 @@ limit_left = -1675
 limit_top = -1651
 limit_right = 1634
 limit_bottom = 1664
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_ohhpf")

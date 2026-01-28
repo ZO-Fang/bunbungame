@@ -1,40 +1,175 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxlcnb6k46wq8"]
+[gd_scene load_steps=35 format=3 uid="uid://cxlcnb6k46wq8"]
 
-[ext_resource type="Texture2D" uid="uid://ci2ljjr24bqq0" path="res://images/maps/finalimage.png" id="1_cnyh4"]
-[ext_resource type="Script" uid="uid://cq1p7sjxslhwu" path="res://button.gd" id="2_cnyh4"]
+[ext_resource type="Texture2D" uid="uid://b750rmi251sun" path="res://images/player-state/crown1.png" id="1_w1lob"]
+[ext_resource type="Texture2D" uid="uid://d1kcur55do6kw" path="res://images/player-state/crown2.png" id="2_2h1ei"]
+[ext_resource type="Texture2D" uid="uid://cn77kp8blsfao" path="res://images/player-state/crown3.png" id="3_pfhtm"]
+[ext_resource type="Texture2D" uid="uid://beuvnpa553n7a" path="res://images/player-state/crown4.png" id="4_3d7o1"]
+[ext_resource type="Texture2D" uid="uid://wxrcgyxaifqr" path="res://images/player-state/crown5.png" id="5_to4xd"]
+[ext_resource type="Texture2D" uid="uid://5uestwd76ovc" path="res://images/player-state/crown6.png" id="6_1yjef"]
+[ext_resource type="Texture2D" uid="uid://isaxeag2mkyo" path="res://images/player-state/crown7.png" id="7_xx08t"]
+[ext_resource type="Texture2D" uid="uid://bvaih8fgh78gb" path="res://images/player-state/crown8.png" id="8_ilyc3"]
+[ext_resource type="Texture2D" uid="uid://bupmqtq3313gm" path="res://images/player-state/crown9.png" id="9_j2s5r"]
+[ext_resource type="Texture2D" uid="uid://3nfdb1w6h2rh" path="res://images/player-state/crown10.png" id="10_f1iwc"]
+[ext_resource type="Texture2D" uid="uid://cxtgyykhr0vki" path="res://images/player-state/crown11.png" id="11_d3634"]
+[ext_resource type="Texture2D" uid="uid://bdcaryxm4c4qe" path="res://images/player-state/crown12.png" id="12_byjpi"]
+[ext_resource type="Texture2D" uid="uid://56c3a72qdryh" path="res://images/player-state/crown13.png" id="13_mlh35"]
+[ext_resource type="Texture2D" uid="uid://dtwsgp4xaieww" path="res://images/player-state/crown14.png" id="14_wu7et"]
+[ext_resource type="Texture2D" uid="uid://c2t35o2puq65s" path="res://images/player-state/crown15.png" id="15_mcoou"]
+[ext_resource type="Texture2D" uid="uid://bdv2m4e00j3kf" path="res://images/UI/crown2-1.png" id="16_pmn43"]
+[ext_resource type="Texture2D" uid="uid://c4wj8i3rv0858" path="res://images/UI/crown2-2.png" id="17_b3318"]
+[ext_resource type="Texture2D" uid="uid://fpoyxl1x7lal" path="res://images/UI/crown2-11.png" id="18_g5obe"]
+[ext_resource type="Script" uid="uid://dy7sxyorhblh" path="res://texture_button.gd" id="19_1yjef"]
+[ext_resource type="Texture2D" uid="uid://d2oopgsc2i7tb" path="res://images/UI/crown2-12.png" id="19_ivpyv"]
+[ext_resource type="Texture2D" uid="uid://cfw6ot7pra7s6" path="res://images/UI/crown2-13.png" id="20_jo027"]
+[ext_resource type="Texture2D" uid="uid://d2ti2wu41h0qj" path="res://images/UI/crown2-14.png" id="21_yyddj"]
+[ext_resource type="Texture2D" uid="uid://bdvxmc7jpyjak" path="res://images/UI/crown2-3.png" id="22_rokos"]
+[ext_resource type="Texture2D" uid="uid://8ndjfr3atjuk" path="res://images/UI/crown2-4.png" id="23_o4c4f"]
+[ext_resource type="Texture2D" uid="uid://g8oghmjmhm2e" path="res://images/UI/crown2-5.png" id="24_vhb51"]
+[ext_resource type="Texture2D" uid="uid://wcinr2c0pl6s" path="res://images/UI/crown2-6.png" id="25_v8dkm"]
+[ext_resource type="Texture2D" uid="uid://bwdov7u623bku" path="res://images/UI/crown2-7.png" id="26_o3opf"]
+[ext_resource type="Texture2D" uid="uid://bx6qk2am0e6ml" path="res://images/UI/crown2-8.png" id="27_u6hfb"]
+[ext_resource type="Texture2D" uid="uid://3q2en1ile865" path="res://images/UI/crown2-9.png" id="28_l502f"]
+[ext_resource type="Texture2D" uid="uid://biwkcvcaqcp7n" path="res://images/UI/crown2-10.png" id="29_ef6bw"]
+[ext_resource type="Texture2D" uid="uid://cw277c161gxxc" path="res://images/UI/playagainbutton2-1.png" id="30_b3318"]
+[ext_resource type="Texture2D" uid="uid://ci68k2lg35wp4" path="res://images/UI/playagainbutton2-2.png" id="31_g5obe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2h1ei"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w1lob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2h1ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pfhtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3d7o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_to4xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1yjef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xx08t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ilyc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j2s5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f1iwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d3634")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_byjpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mlh35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wu7et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mcoou")
+}],
+"loop": false,
+"name": &"win",
+"speed": 10.0
+}]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_2h1ei"]
+frames = 14
+one_shot = true
+speed_scale = 2.0
+frame_0/texture = ExtResource("16_pmn43")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("17_b3318")
+frame_1/duration = 0.3
+frame_2/texture = ExtResource("22_rokos")
+frame_2/duration = 0.3
+frame_3/texture = ExtResource("23_o4c4f")
+frame_3/duration = 0.3
+frame_4/texture = ExtResource("24_vhb51")
+frame_4/duration = 0.3
+frame_5/texture = ExtResource("25_v8dkm")
+frame_5/duration = 0.3
+frame_6/texture = ExtResource("26_o3opf")
+frame_6/duration = 0.3
+frame_7/texture = ExtResource("27_u6hfb")
+frame_7/duration = 0.3
+frame_8/texture = ExtResource("28_l502f")
+frame_8/duration = 0.3
+frame_9/texture = ExtResource("29_ef6bw")
+frame_9/duration = 0.3
+frame_10/texture = ExtResource("18_g5obe")
+frame_10/duration = 0.3
+frame_11/texture = ExtResource("19_ivpyv")
+frame_11/duration = 0.3
+frame_12/texture = ExtResource("20_jo027")
+frame_12/duration = 0.3
+frame_13/texture = ExtResource("21_yyddj")
+frame_13/duration = 0.3
 
 [node name="youwin" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_left = -547.0
-offset_top = -499.0
-offset_right = 1854.0
-offset_bottom = 1247.0
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 203.0
-offset_top = -69.0
-offset_right = 1126.0
-offset_bottom = 680.0
-texture = ExtResource("1_cnyh4")
-stretch_mode = 3
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 18.0
-offset_top = 27.0
-offset_right = 1283.0
-offset_bottom = 164.0
-theme_override_colors/font_color = Color(0.672044, 0.228791, 0.762726, 1)
-theme_override_font_sizes/font_size = 100
-text = "Congratulations, you win!"
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 514.0
-offset_top = 614.0
-offset_right = 767.0
-offset_bottom = 691.0
-theme_override_font_sizes/font_size = 50
-text = "play again"
-script = ExtResource("2_cnyh4")
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+visible = false
+scale = Vector2(0.727, 0.7)
+sprite_frames = SubResource("SpriteFrames_2h1ei")
+animation = &"win"
+autoplay = "win"
+frame = 14
+frame_progress = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AnimatedTexture_2h1ei")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("30_b3318")
+texture_pressed = ExtResource("31_g5obe")
+script = ExtResource("19_1yjef")

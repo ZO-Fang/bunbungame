@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=3 uid="uid://bwudkqshh6p62"]
+
+[ext_resource type="Texture2D" uid="uid://b7nj6o08ro35u" path="res://images/UI/leaf2-1.png" id="1_6s1me"]
+[ext_resource type="Texture2D" uid="uid://c83gekdokly66" path="res://images/UI/leaf2-2.png" id="2_6ug7o"]
+[ext_resource type="Texture2D" uid="uid://dsuy84fo83ml" path="res://images/UI/leaf2-3.png" id="3_nqtan"]
+[ext_resource type="Texture2D" uid="uid://wmdv2vfi4vd7" path="res://images/UI/leaf2-4.png" id="4_1ak8d"]
+[ext_resource type="Texture2D" uid="uid://du2cvhk4ic1y1" path="res://images/UI/leaf2-5.png" id="5_byr0s"]
+[ext_resource type="Texture2D" uid="uid://delh8qsnb8apy" path="res://images/UI/leaf2-6.png" id="6_8y2i8"]
+[ext_resource type="Texture2D" uid="uid://cbrsn6eeukum2" path="res://images/UI/leaf2-7.png" id="7_t3rsg"]
+[ext_resource type="Texture2D" uid="uid://ch1i1k4pg6tis" path="res://images/UI/leaf2-8.png" id="8_6ug7o"]
+[ext_resource type="Texture2D" uid="uid://cw277c161gxxc" path="res://images/UI/playagainbutton2-1.png" id="8_88tcm"]
+[ext_resource type="Texture2D" uid="uid://ci68k2lg35wp4" path="res://images/UI/playagainbutton2-2.png" id="9_agr2d"]
+[ext_resource type="Script" uid="uid://dy7sxyorhblh" path="res://texture_button.gd" id="10_l0xis"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5a6l1"]
+frames = 8
+one_shot = true
+frame_0/texture = ExtResource("1_6s1me")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("2_6ug7o")
+frame_1/duration = 0.3
+frame_2/texture = ExtResource("3_nqtan")
+frame_2/duration = 0.3
+frame_3/texture = ExtResource("4_1ak8d")
+frame_3/duration = 0.3
+frame_4/texture = ExtResource("5_byr0s")
+frame_4/duration = 0.3
+frame_5/texture = ExtResource("6_8y2i8")
+frame_5/duration = 0.3
+frame_6/texture = ExtResource("7_t3rsg")
+frame_6/duration = 0.3
+frame_7/texture = ExtResource("8_6ug7o")
+frame_7/duration = 0.3
+
+[node name="youlose" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AnimatedTexture_5a6l1")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("8_88tcm")
+texture_pressed = ExtResource("9_agr2d")
+script = ExtResource("10_l0xis")

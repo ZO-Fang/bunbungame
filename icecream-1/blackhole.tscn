@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d34331ikyms2o"]
+
+[ext_resource type="Texture2D" uid="uid://crayx2nhdlevh" path="res://images/tools/blackhole.png" id="1_bjy8h"]
+
+[node name="blackhole" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bjy8h")

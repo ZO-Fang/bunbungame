@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://4in7xume7kj8"]
+
+[ext_resource type="Texture2D" uid="uid://ckr756fc8sj2q" path="res://images/tools/mud-v2.png" id="1_cmyrt"]
+
+[node name="mud" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-94, -49, -74, -98, 9, -120, 81, -103, 110, -37, 89, 0, 47, 22, 38, 43, 63, 69, 39, 93, 11, 100, -13, 127, -61, 128, -35, 75, -75, 63, -55, 18, -63, -3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cmyrt")
