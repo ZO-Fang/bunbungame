@@ -272,7 +272,6 @@ rotation = -0.659734
 [node name="deadtrap" parent="." instance=ExtResource("2_63myd")]
 
 [node name="Sprite2D" parent="deadtrap" index="0"]
-visible = false
 position = Vector2(-1268, 817)
 
 [node name="CollisionShape2D" parent="deadtrap" index="1"]
@@ -304,6 +303,7 @@ frame_progress = 0.402612
 [node name="exitgate" parent="." instance=ExtResource("3_drmnu")]
 position = Vector2(1057, 777)
 next_scene_path = "res://bg3.tscn"
+player_new_position = Vector2(-755, 20)
 
 [node name="Sprite2D" parent="exitgate" index="0"]
 position = Vector2(362, 249)
