@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 func break_wood():
-	# 换碎木贴图
+	# change broken wood image
 	$Sprite2D.texture = preload("res://images/tools/woodboard-broken.png")
 	
-		# 禁用碰撞（必须用 set_deferred）
+		# make this wood disappear from the game physical world
 	$CollisionShape2D.set_deferred("disabled", true)
 	
 	

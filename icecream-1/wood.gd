@@ -14,18 +14,17 @@ func break_wood():
 
 	is_broken = true
 
-	# 更换贴图
+	# change wood image
 	sprite.texture = broken_texture
 
-	# 禁用阻挡碰撞
+	# disable everthing that block the wood
 	static_col.disabled = true
 
-	# 也关掉检测器，避免重复触发
+	# turn off detector to avoid repeated activity
 	detector_col.disabled = true
 
 
 func _on_area_2d_body_entered(body):
-	# 玩家本体进入检测区
 	if body.name == "player":
 		if body.smash_power > body.SMASH_THRESHOLD:
 			break_wood()

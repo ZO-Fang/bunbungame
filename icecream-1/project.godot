@@ -10,10 +10,17 @@ config_version=5
 
 [application]
 
-config/name="icecream-1"
-run/main_scene="uid://ch265iegomto5"
+config/name="Bunbun In Maze"
+run/main_scene="uid://cnu25d5jsd28t"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.402457, 0.529324, 0.991623, 1)
+boot_splash/image="uid://m60mfkmp8q3b"
+config/icon="uid://opa24r2ibw53"
+boot_splash/minimum_display_time=1000
+
+[autoload]
+
+GameConfig="*res://GameConfig.gd"
 
 [display]
 

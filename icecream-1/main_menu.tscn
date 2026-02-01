@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://cnu25d5jsd28t"]
+
+[ext_resource type="Texture2D" uid="uid://cnujd5s7hfua4" path="res://images/UI/mainbg1.png" id="1_0o4t1"]
+[ext_resource type="Script" uid="uid://b80ojqu17dne" path="res://start_button.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://bcno22dlfjr4w" path="res://images/UI/easymode.png" id="2_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://bwvrr3ekvbgae" path="res://images/UI/easypressed.png" id="3_0k4wn"]
+[ext_resource type="Script" uid="uid://1toe471njlle" path="res://easymode.gd" id="5_glbon"]
+[ext_resource type="Texture2D" uid="uid://jlsacl6bg50p" path="res://images/UI/normalmode.png" id="5_j5v2v"]
+[ext_resource type="Texture2D" uid="uid://c0l35eo5ppt1m" path="res://images/UI/normalmodepressed.png" id="6_iotk1"]
+[ext_resource type="Script" uid="uid://c7pps0203hjwr" path="res://hardmode.gd" id="6_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://0tm67l7ogdp" path="res://images/UI/hardmode.png" id="8_w44g7"]
+[ext_resource type="Texture2D" uid="uid://hespjwnphhc3" path="res://images/UI/hardmodepressed.png" id="9_cm266"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -214.0
+offset_top = -112.0
+offset_right = 1922.0
+offset_bottom = 858.0
+texture = ExtResource("1_0o4t1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 162.0
+offset_right = 370.0
+offset_bottom = 653.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_0o4t1")
+texture_pressed = ExtResource("3_0k4wn")
+script = ExtResource("1_06t4h")
+
+[node name="TextureButton2" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_j5v2v")
+texture_pressed = ExtResource("6_iotk1")
+script = ExtResource("5_glbon")
+
+[node name="TextureButton3" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_w44g7")
+texture_pressed = ExtResource("9_cm266")
+script = ExtResource("6_nlkkf")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="CenterContainer/VBoxContainer/StartButton" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TextureButton2" to="CenterContainer/VBoxContainer/TextureButton2" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TextureButton3" to="CenterContainer/VBoxContainer/TextureButton3" method="_on_pressed"]

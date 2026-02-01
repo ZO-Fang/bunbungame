@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cqamcwl2vjmfd"]
+[gd_scene load_steps=17 format=3 uid="uid://cqamcwl2vjmfd"]
 
 [ext_resource type="Texture2D" uid="uid://bc0t188842p5a" path="res://images/maps/map4-2.png" id="1_y8vkc"]
 [ext_resource type="PackedScene" uid="uid://dkrmtjqskmdnt" path="res://deadtrap.tscn" id="2_y8vkc"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ddr47i5i7fykx" path="res://flower.tscn" id="4_y8vkc"]
 [ext_resource type="PackedScene" uid="uid://b0yte1i50xndn" path="res://whitehole.tscn" id="6_t5w07"]
 [ext_resource type="PackedScene" uid="uid://4in7xume7kj8" path="res://mud.tscn" id="7_yw30k"]
+[ext_resource type="Texture2D" uid="uid://d3al7xs5whod5" path="res://images/tools/moreices2.png" id="10_0wcyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5w07"]
 size = Vector2(116, 472.5)
@@ -61,11 +62,6 @@ position = Vector2(573, -326)
 rotation = 3.14159
 scale = Vector2(2, 2)
 
-[node name="woodboard3" parent="." instance=ExtResource("3_u72kb")]
-position = Vector2(-323, 1161)
-rotation = 1.5708
-scale = Vector2(2, 2)
-
 [node name="woodboard4" parent="." instance=ExtResource("3_u72kb")]
 position = Vector2(-485, -1144)
 rotation = 1.5708
@@ -113,7 +109,7 @@ target_black_hole = NodePath("../blackhole3")
 position = Vector2(-1197, -567)
 
 [node name="mud" parent="." instance=ExtResource("7_yw30k")]
-position = Vector2(1178, -1116)
+position = Vector2(-1431, 1261)
 
 [node name="flower3" parent="." instance=ExtResource("4_y8vkc")]
 position = Vector2(-118, -608)
@@ -122,16 +118,57 @@ position = Vector2(-118, -608)
 position = Vector2(582, -21)
 
 [node name="flower4" parent="." instance=ExtResource("4_y8vkc")]
-position = Vector2(-1408, -237)
+position = Vector2(-1392, 166)
 
 [node name="flower5" parent="." instance=ExtResource("4_y8vkc")]
 position = Vector2(-1196, 1135)
 
 [node name="flower6" parent="." instance=ExtResource("4_y8vkc")]
-position = Vector2(1164, -302)
+position = Vector2(1330, 152)
 
 [node name="flower" parent="." instance=ExtResource("4_y8vkc")]
 position = Vector2(-708, 492)
+
+[node name="deadtrap2" parent="." instance=ExtResource("2_y8vkc")]
+position = Vector2(1062, 701)
+
+[node name="ice2" parent="." instance=ExtResource("3_0vda8")]
+
+[node name="CollisionPolygon2D" parent="ice2" index="0"]
+position = Vector2(2580, 838)
+
+[node name="Sprite2D" parent="ice2" index="1"]
+texture = ExtResource("10_0wcyi")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(-1546, -416, -1439, -416, -1436, -214, -1541, -210)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(-1244, 1242, -1135, 1244, -1129, 1439, -1245, 1440)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(-794, 855, -790, 1050, -683, 1053, -683, 854)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(-788, 1344, -681, 1342, -681, 1436, -791, 1439)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(-469, 1234, -363, 1239, -359, 1440, -473, 1440)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(-246, 854, -242, 954, -134, 951, -136, 854)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(1128, 1117, 1301, 1120, 1305, 1439, 1128, 1439)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(1240, -464, 1442, -458, 1441, -351, 1241, -356)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(1347, -138, 1439, -138, 1442, -32, 1345, -33)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="ice2"]
+polygon = PackedVector2Array(1238, 315, 1442, 318, 1444, 425, 1238, 420)
 
 [node name="ice" parent="." instance=ExtResource("3_0vda8")]
 
@@ -167,4 +204,5 @@ polygon = PackedVector2Array(-1548, 336, -1351, 347, -1342, 448, -1553, 446)
 polygon = PackedVector2Array(-1052, -955, 958, -953, 956, -351, 846, -349, 841, -852, -937, -843, -1052, -861)
 
 [editable path="deadtrap"]
+[editable path="ice2"]
 [editable path="ice"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwudkqshh6p62"]
+[gd_scene load_steps=16 format=3 uid="uid://bwudkqshh6p62"]
 
 [ext_resource type="Texture2D" uid="uid://b7nj6o08ro35u" path="res://images/UI/leaf2-1.png" id="1_6s1me"]
 [ext_resource type="Texture2D" uid="uid://c83gekdokly66" path="res://images/UI/leaf2-2.png" id="2_6ug7o"]
@@ -8,9 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://delh8qsnb8apy" path="res://images/UI/leaf2-6.png" id="6_8y2i8"]
 [ext_resource type="Texture2D" uid="uid://cbrsn6eeukum2" path="res://images/UI/leaf2-7.png" id="7_t3rsg"]
 [ext_resource type="Texture2D" uid="uid://ch1i1k4pg6tis" path="res://images/UI/leaf2-8.png" id="8_6ug7o"]
-[ext_resource type="Texture2D" uid="uid://cw277c161gxxc" path="res://images/UI/playagainbutton2-1.png" id="8_88tcm"]
-[ext_resource type="Texture2D" uid="uid://ci68k2lg35wp4" path="res://images/UI/playagainbutton2-2.png" id="9_agr2d"]
+[ext_resource type="Texture2D" uid="uid://dgit55162bs4p" path="res://images/UI/playagain-3.png" id="9_byr0s"]
+[ext_resource type="Texture2D" uid="uid://sq38dk51bns8" path="res://images/UI/playagain-2.png" id="10_8y2i8"]
 [ext_resource type="Script" uid="uid://dy7sxyorhblh" path="res://texture_button.gd" id="10_l0xis"]
+[ext_resource type="Script" uid="uid://bwd7145yqq2bc" path="res://main_menu_button.gd" id="12_nqtan"]
+[ext_resource type="Texture2D" uid="uid://dic3i7ko4n5e1" path="res://images/UI/mainmenu-3.png" id="12_t3rsg"]
+[ext_resource type="Texture2D" uid="uid://hnk61apyjaka" path="res://images/UI/mainmenu-4.png" id="13_88tcm"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_5a6l1"]
 frames = 8
@@ -70,10 +73,23 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = SubResource("AnimatedTexture_5a6l1")
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("8_88tcm")
-texture_pressed = ExtResource("9_agr2d")
+texture_normal = ExtResource("9_byr0s")
+texture_pressed = ExtResource("10_8y2i8")
 script = ExtResource("10_l0xis")
+
+[node name="MainMenuTextureButton2" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_t3rsg")
+texture_pressed = ExtResource("13_88tcm")
+script = ExtResource("12_nqtan")
+
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/MainMenuTextureButton2" to="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/MainMenuTextureButton2" method="_on_pressed"]

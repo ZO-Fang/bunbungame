@@ -1,24 +1,13 @@
-[gd_scene load_steps=35 format=3 uid="uid://cxlcnb6k46wq8"]
+[gd_scene load_steps=22 format=3 uid="uid://cxlcnb6k46wq8"]
 
-[ext_resource type="Texture2D" uid="uid://b750rmi251sun" path="res://images/player-state/crown1.png" id="1_w1lob"]
-[ext_resource type="Texture2D" uid="uid://d1kcur55do6kw" path="res://images/player-state/crown2.png" id="2_2h1ei"]
-[ext_resource type="Texture2D" uid="uid://cn77kp8blsfao" path="res://images/player-state/crown3.png" id="3_pfhtm"]
-[ext_resource type="Texture2D" uid="uid://beuvnpa553n7a" path="res://images/player-state/crown4.png" id="4_3d7o1"]
-[ext_resource type="Texture2D" uid="uid://wxrcgyxaifqr" path="res://images/player-state/crown5.png" id="5_to4xd"]
-[ext_resource type="Texture2D" uid="uid://5uestwd76ovc" path="res://images/player-state/crown6.png" id="6_1yjef"]
-[ext_resource type="Texture2D" uid="uid://isaxeag2mkyo" path="res://images/player-state/crown7.png" id="7_xx08t"]
-[ext_resource type="Texture2D" uid="uid://bvaih8fgh78gb" path="res://images/player-state/crown8.png" id="8_ilyc3"]
-[ext_resource type="Texture2D" uid="uid://bupmqtq3313gm" path="res://images/player-state/crown9.png" id="9_j2s5r"]
-[ext_resource type="Texture2D" uid="uid://3nfdb1w6h2rh" path="res://images/player-state/crown10.png" id="10_f1iwc"]
-[ext_resource type="Texture2D" uid="uid://cxtgyykhr0vki" path="res://images/player-state/crown11.png" id="11_d3634"]
-[ext_resource type="Texture2D" uid="uid://bdcaryxm4c4qe" path="res://images/player-state/crown12.png" id="12_byjpi"]
-[ext_resource type="Texture2D" uid="uid://56c3a72qdryh" path="res://images/player-state/crown13.png" id="13_mlh35"]
-[ext_resource type="Texture2D" uid="uid://dtwsgp4xaieww" path="res://images/player-state/crown14.png" id="14_wu7et"]
-[ext_resource type="Texture2D" uid="uid://c2t35o2puq65s" path="res://images/player-state/crown15.png" id="15_mcoou"]
+[ext_resource type="Texture2D" uid="uid://dgit55162bs4p" path="res://images/UI/playagain-3.png" id="15_to4xd"]
+[ext_resource type="Texture2D" uid="uid://sq38dk51bns8" path="res://images/UI/playagain-2.png" id="16_1yjef"]
 [ext_resource type="Texture2D" uid="uid://bdv2m4e00j3kf" path="res://images/UI/crown2-1.png" id="16_pmn43"]
 [ext_resource type="Texture2D" uid="uid://c4wj8i3rv0858" path="res://images/UI/crown2-2.png" id="17_b3318"]
 [ext_resource type="Texture2D" uid="uid://fpoyxl1x7lal" path="res://images/UI/crown2-11.png" id="18_g5obe"]
+[ext_resource type="Texture2D" uid="uid://dic3i7ko4n5e1" path="res://images/UI/mainmenu-3.png" id="18_xx08t"]
 [ext_resource type="Script" uid="uid://dy7sxyorhblh" path="res://texture_button.gd" id="19_1yjef"]
+[ext_resource type="Texture2D" uid="uid://hnk61apyjaka" path="res://images/UI/mainmenu-4.png" id="19_ilyc3"]
 [ext_resource type="Texture2D" uid="uid://d2oopgsc2i7tb" path="res://images/UI/crown2-12.png" id="19_ivpyv"]
 [ext_resource type="Texture2D" uid="uid://cfw6ot7pra7s6" path="res://images/UI/crown2-13.png" id="20_jo027"]
 [ext_resource type="Texture2D" uid="uid://d2ti2wu41h0qj" path="res://images/UI/crown2-14.png" id="21_yyddj"]
@@ -30,61 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bx6qk2am0e6ml" path="res://images/UI/crown2-8.png" id="27_u6hfb"]
 [ext_resource type="Texture2D" uid="uid://3q2en1ile865" path="res://images/UI/crown2-9.png" id="28_l502f"]
 [ext_resource type="Texture2D" uid="uid://biwkcvcaqcp7n" path="res://images/UI/crown2-10.png" id="29_ef6bw"]
-[ext_resource type="Texture2D" uid="uid://cw277c161gxxc" path="res://images/UI/playagainbutton2-1.png" id="30_b3318"]
-[ext_resource type="Texture2D" uid="uid://ci68k2lg35wp4" path="res://images/UI/playagainbutton2-2.png" id="31_g5obe"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2h1ei"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_w1lob")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_2h1ei")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_pfhtm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_3d7o1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_to4xd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_1yjef")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_xx08t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_ilyc3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_j2s5r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_f1iwc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_d3634")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_byjpi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_mlh35")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_wu7et")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_mcoou")
-}],
-"loop": false,
-"name": &"win",
-"speed": 10.0
-}]
+[ext_resource type="Script" uid="uid://bwd7145yqq2bc" path="res://main_menu_button.gd" id="33_g5obe"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_2h1ei"]
 frames = 14
@@ -151,25 +86,29 @@ grow_vertical = 2
 layout_mode = 2
 alignment = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
-visible = false
-scale = Vector2(0.727, 0.7)
-sprite_frames = SubResource("SpriteFrames_2h1ei")
-animation = &"win"
-autoplay = "win"
-frame = 14
-frame_progress = 1.0
-
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = SubResource("AnimatedTexture_2h1ei")
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("30_b3318")
-texture_pressed = ExtResource("31_g5obe")
+texture_normal = ExtResource("15_to4xd")
+texture_pressed = ExtResource("16_1yjef")
 script = ExtResource("19_1yjef")
+
+[node name="MainMenuButton" type="TextureButton" parent="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("18_xx08t")
+texture_pressed = ExtResource("19_ilyc3")
+script = ExtResource("33_g5obe")
+
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/MainMenuButton" to="CanvasLayer/Control/CenterContainer/VBoxContainer/HBoxContainer/MainMenuButton" method="_on_pressed"]

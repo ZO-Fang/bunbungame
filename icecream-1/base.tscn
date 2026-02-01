@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch265iegomto5"]
+[gd_scene load_steps=6 format=3 uid="uid://ch265iegomto5"]
 
 [ext_resource type="PackedScene" uid="uid://bov444elg6cai" path="res://bg1.tscn" id="1_8rhti"]
+[ext_resource type="Script" uid="uid://c7qj6pofmpief" path="res://base.gd" id="1_21bcp"]
 [ext_resource type="PackedScene" uid="uid://f1kwfxif1hg4" path="res://ui.tscn" id="1_ohhpf"]
 [ext_resource type="PackedScene" uid="uid://c2qjusm6toccv" path="res://player.tscn" id="2_3vi8l"]
 [ext_resource type="Texture2D" uid="uid://c4cmj7aet58c3" path="res://images/maps/transparent-1.png" id="4_ohhpf"]
 
 [node name="base" type="Node2D"]
+script = ExtResource("1_21bcp")
 
 [node name="ui" parent="." instance=ExtResource("1_ohhpf")]
 
