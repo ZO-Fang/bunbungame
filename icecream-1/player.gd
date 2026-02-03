@@ -92,8 +92,6 @@ func apply_mud_effect():
 	$AnimatedSprite2D.play("dark-walk")
 
 	SPEED = mud_speed
-
-	# 开始一个异步 10 秒计时器（不会卡住游戏）
 	mud_timer()
 
 
@@ -107,11 +105,7 @@ func remove_mud_effect():
 		return
 
 	is_in_mud = false
-
-	#改到普通动画
 	$AnimatedSprite2D.play("walk")   
-
-	# 恢复速度
 	SPEED = normal_speed
 	
 
@@ -156,7 +150,6 @@ func start_freeze_damage_loop() -> void:
 		print("ice damage. hp -1 =", hp)
 		check_player_dead()  
 	
-
 	freeze_timer_running = false
 
 
